@@ -1,0 +1,57 @@
+<div class = "col-md-6 offset-md-3">
+    <h3>Add Product</h3>
+    <form (ngSubmit) = "addProduct()">
+      <div class = "form-group">
+          <label>Product Id</label>
+          <input type="text" class = "form-control" id = productId
+          [(ngModel)]= "product.productId" name = "productId">
+      </div>
+    
+      <div class = "form-group">
+        <label>productName</label>
+        <input type="text" class = "form-control" id = productName
+        [(ngModel)]= "product.productName" name = "productName">
+    </div>
+    
+    <div class = "form-group">
+        <label>brandName</label>
+        <input type="text" class = "form-control" id = brandName
+        [(ngModel)]= "product.brandName" name = "brandName">
+    </div>
+
+    <div class = "form-group">
+        <label>price</label>
+        <input type="text" class = "form-control" id = price
+        [(ngModel)]= "product.price" name = "price">
+    </div>
+
+    <div class = "form-group">
+        <label>discountPercent</label>
+        <input pattern="\b([1-9]|[12][0-9])\b" type="text" class = "form-control" id = discountPercent
+        [(ngModel)]= "product.discountPercent" name = "discountPercent" #discountPercent="ngModel">
+        <div *ngIf = "discountPercent.invalid && (discountPercent.dirty || discountPercent.touched)" class = "error">
+            <div *ngIf = "discountPercent.hasError('pattern')" class = "text-danger">Invalid discount.Valid discount between 0 and 30</div>
+        </div>
+
+    </div>
+
+    <div class = "form-group">
+        <label>expiryDate</label>
+        <input type="text" class = "form-control" id = expiryDate
+        [(ngModel)]= "product.expiryDate" name = "expiryDate">
+    </div>
+
+    <div class = "form-group">
+        <label>manufacturedDate</label>
+        <input type="text" class = "form-control" id = manufacturedDate
+        [(ngModel)]= "product.manufacturedDate" name = "manufacturedDate">
+    </div>
+
+    
+    
+    
+    <button class = "btn btn-success" type = "submit" >Submit</button>
+    
+    
+        </form>
+        </div>

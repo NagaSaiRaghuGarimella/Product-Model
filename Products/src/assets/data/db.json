@@ -1,0 +1,36 @@
+{
+    "products":[
+        {
+            "Id":1,
+           "productId":1,
+           "productName":"Oil", 
+           "brandName":"Sunflower",
+           "price":150,
+           "discount":"10%",
+           "expiryDate":"20-12-2023",
+           "manufacturedDate":"13-09-2021"
+    },
+        {
+            "Id":2,
+           "productId":3,
+           "productName":"Oil", 
+           "brandName":"Palm Oil",
+           "price":140,
+           "discount":"5%",
+           "expiryDate":"02-12-2022",
+           "manufacturedDate":"14-09-2020"
+       },
+            {
+                "Id":3,
+               "productId":4,
+               "productName":"Medicine", 
+               "brandName":"Dolo 650",
+               "price":15,
+               "discount":"2%",
+               "expiryDate":"23-10-2022",
+               "manufacturedDate":"12-09-2021"
+        }
+    ]
+      }
+
+  

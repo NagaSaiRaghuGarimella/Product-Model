@@ -1,0 +1,33 @@
+<h2> Product List</h2>
+<nav><input type="text" class="form-control" name="brandName"
+
+     placeholder="enter brand name" [(ngModel)]="brandName" (ngModelChange)="search()"></nav>
+<table class = "table table-striped">
+    <thead>
+    <tr>
+        <th (click)="sort('productId')">Product Id&nbsp;</th>
+        <th (click)="sort('productName')">Product Name&nbsp;</th>
+        <th>Brand Name</th>
+        <th>Price</th>
+        <th>Discount Percent</th>
+        <th>Expiry Date</th>
+        <th>Manufactured Date</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let product of products | orderBy:key:reverse">
+            <td>{{product.productId}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.brandName}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.discountPercent}}</td>
+            <td>{{product.expiryDate}}</td>
+            <td>{{product.manufacturedDate}}</td>
+             <td><button (click)="updateProduct(product.productId)">Update</button></td>
+             <td><button (click)="deleteProduct(product.productId)" class = "btn btn-danger" style = margin-left:10px>Delete</button></td>
+            <td><button (click)="productDetails(product.productId)" class = "btn btn-info" style = margin-left:10px>View</button></td>
+
+        </tr>
+    </tbody>
+</table>
