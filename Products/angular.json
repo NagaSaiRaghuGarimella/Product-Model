@@ -1,3 +1,4 @@
+//json for the product details
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
