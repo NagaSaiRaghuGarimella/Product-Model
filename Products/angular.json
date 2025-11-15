@@ -1,4 +1,5 @@
 //json file for the product information
+//restarted the file
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
